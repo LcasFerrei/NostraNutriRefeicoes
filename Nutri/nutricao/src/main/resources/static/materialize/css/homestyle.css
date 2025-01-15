@@ -1488,3 +1488,18 @@ nav ul li a:hover {
         /* Reduz o tamanho do subtítulo */
     }
 }
+
+
+/* Adiciona animação fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+

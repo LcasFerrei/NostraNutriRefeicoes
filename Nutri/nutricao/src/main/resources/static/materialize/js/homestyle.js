@@ -23,3 +23,17 @@ function scrollRight() {
     scrollAmount += cardWidth;
     container.style.transform = `translateX(${scrollAmount}px)`;
 }
+
+
+// Detecta quando o elemento entra na tela
+document.addEventListener("scroll", function () {
+    var elements = document.querySelectorAll('.scroll-animation');
+    elements.forEach(function (element) {
+        var position = element.getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+
+        if (position < windowHeight - 50) {
+            element.classList.add('visible');
+        }
+    });
+});
