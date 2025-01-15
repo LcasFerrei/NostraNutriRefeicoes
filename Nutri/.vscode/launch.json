@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-NutricaoApplication<spring-vscode>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.nutri.nutricao.NutricaoApplication",
+            "projectName": "spring-vscode",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

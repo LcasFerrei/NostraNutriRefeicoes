@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/materialize/css/homestyle.css">
+    <link rel="stylesheet" href="/materialize/css/trabalheconoscostyle.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="icon" href="materialize\imagens/7.png" type="image/png">
+    <title>NostraNutri Refeições Coletivas</title>
+
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div class="NostraLogo">
+                <img src="materialize\imagens/logo-nostranutri-04.png" alt="lg" class="lg">
+            </div>
+            <ul>
+                <li><a href="/home">Início</a></li>
+                <li><a href="#about-us">Quem Somos</a></li>
+                <li><a href="#services">Nossos Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="/trabalheconosco">Trabalhe Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="curriculo-section">
+        <!--
+        <div class="logo left-logo">
+            <img src="materialize/imagens/nostranutri-icone-07.png" alt="Logo 1">
+        </div>
+        <div class="logo right-logo">
+            <img src="materialize/imagens/nostranutri-icone-07.png" alt="Logo 2">
+        </div>
+        <div class="logo left-logo" style="top: 40%;">
+            <img src="materialize/imagens/nostranutri-icone-06.png" alt="Logo 3">
+        </div>
+        <div class="logo right-logo" style="top: 40%;">
+            <img src="materialize/imagens/nostranutri-icone-08.png" alt="Logo 4">
+        </div>
+        <div class="logo left-logo" style="top: 60%;">
+            <img src="materialize/imagens/nostranutri-icone-02.png" alt="Logo 5">
+        </div>
+        <div class="logo right-logo" style="top: 60%;">
+            <img src="materialize/imagens/nostranutri-icone-01.png" alt="Logo 6">
+        </div>
+        <div class="logo left-logo" style="top: 80%;">
+            <img src="materialize/imagens/nostranutri-icone-14.png" alt="Logo 7">
+        </div>
+        <div class="logo right-logo" style="top: 80%;">
+            <img src="materialize/imagens/nostranutri-icone-15.png" alt="Logo 8">
+        </div>
+    -->
+
+
+        <div id="curriculo-form-container">
+            <form id="curriculo-form" class="needs-validation" novalidate action="/trabalheconosco" method="post"
+                enctype="multipart/form-data">
+                <h2>Cadastro de Currículo</h2>
+                <p>Preencha o formulário abaixo para se candidatar</p>
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                    <div class="invalid-feedback">Por favor, informe seu nome completo.</div>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" required>
+                    <div class="invalid-feedback">Por favor, informe seu CPF.</div>
+                </div>
+                <div class="form-group">
+                    <label for="idade">Idade</label>
+                    <input type="number" class="form-control" id="idade" name="idade" required>
+                    <div class="invalid-feedback">Por favor, informe sua idade.</div>
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidade">Nacionalidade</label>
+                    <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" required>
+                    <div class="invalid-feedback">Por favor, informe sua nacionalidade.</div>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                    <div class="invalid-feedback">Por favor, informe seu telefone.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">Por favor, informe seu e-mail.</div>
+                </div>
+                <div class="form-group">
+                    <label for="experiencia">Tem experiência com restaurantes ou atendimento ao cliente?</label>
+                    <select class="form-control" id="experiencia" name="experiencia" required>
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                    <div class="invalid-feedback">Por favor, selecione uma opção.</div>
+                </div>
+                <div class="form-group">
+                    <label for="curriculo">Anexar Currículo (PDF)</label>
+                    <input type="file" class="form-control" id="curriculo" name="curriculo" accept=".pdf" required>
+                    <div class="invalid-feedback">Por favor, anexe seu currículo em formato PDF.</div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-custom">Enviar</button>
+                </div>
+            </form>
+            <div id="form-feedback" style="display:none;">
+                Obrigado! Recebemos seu currículo e entraremos em contato em breve.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NostraNutri. Todos os direitos reservados.</p>
+            <p>
+                &copy; 2025
+                <span style="cursor: pointer; color: inherit;" onclick="abrirWhatsApp()">
+                XaropeGroup
+                </span>. 
+                Todos os direitos reservados a 
+                &copy;
+                <span style="cursor: pointer; color: inherit;" onclick="abrirWhatsApp()">
+                AJLL Tech Solutions
+                </span>.
+            </p>
+            <p>
+                Faça seu orçamento clicando nos textos acima!
+            </p>
+
+            
+        </div>
+    </footer>
+
+    <script>
+        // Adicionando validação personalizada ao formulário
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms).forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    } else {
+                        if (confirm('Você tem certeza de que deseja enviar o formulário?')) {
+                            form.classList.add('was-validated')
+                            document.getElementById('form-feedback').style.display = 'block';
+                        } else {
+                            event.preventDefault();
+                        }
+                    }
+                }, false)
+            })
+        })()
+    </script>
+</body>
+
+</html>

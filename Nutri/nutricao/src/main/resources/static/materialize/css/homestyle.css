@@ -1,0 +1,1490 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.highlight-text {
+    font-family: 'Mitr', sans-serif;
+}
+
+/* Para textos longos */
+.long-text {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+:root {
+    /* Cores primárias */
+    --cor-verde: #63A74D;
+    --cor-limao: #CDD71A;
+    --cor-amarelo: #F8D035;
+    --cor-laranja: #F26A1A;
+    --cor-vermelho: #8A2420;
+
+    /* Cores secundárias */
+    --cor-verde-escuro: #243C1C;
+    --cor-vinho: #5A1E35;
+    --cor-roxo: #450B3B;
+    --cor-preto: #262626;
+    --cor-branco: #F5F5F5;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-branco);
+    color: #e75e0e;
+    overflow-x: hidden;
+    /* Esconde a rolagem horizontal */
+}
+
+header,
+nav {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Mitr', sans-serif;
+}
+
+
+
+/* Botões e Links */
+.btn-default,
+.btn-orcamento,
+nav ul li a,
+.social_media_btn a {
+    font-family: 'Mitr', sans-serif;
+}
+
+/* Seções Específicas */
+#about-us h2,
+#services h2,
+.gallery-container h2,
+.footer-about h3,
+.footer-contact h3,
+.footer-social h3,
+#contato .section-title,
+#navbar #nav_logo,
+.mission h3,
+.vision h3,
+.values h3 {
+    font-family: 'Mitr', sans-serif;
+    /* Usando Mitr para títulos e destaques */
+}
+
+/* Ajustando o resto das seções */
+#services,
+.service-item h3,
+.service-item p,
+.footer-bottom p {
+    font-family: 'Nunito', sans-serif;
+    /* Usando Nunito para textos mais longos */
+}
+
+/* Ajuste de responsividade para fontes */
+@media screen and (max-width: 768px) {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Mitr', sans-serif;
+        /* Usando Mitr para títulos */
+    }
+
+    .btn-default,
+    .btn-orcamento {
+        font-family: 'Mitr', sans-serif;
+        /* Usando Mitr para botões */
+    }
+
+    #navbar #nav_logo,
+    nav ul li a {
+        font-family: 'Mitr', sans-serif;
+        /* Usando Mitr para navegação */
+    }
+}
+
+
+/* Estilização da navegação */
+nav {
+    background-color: var(--cor-verde-escuro);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    /* Permite que os itens se reorganizem se não houver espaço suficiente */
+    /*position: fixed; nav
+    top: 0;
+    width: 98%;
+    z-index: 1000;*/
+
+}
+
+.logo-container {
+    max-width: 100px;
+    /* Limite o tamanho da logo */
+}
+
+.logo {
+    width: 200%;
+    /* A logo agora ocupa o espaço máximo permitido pelo container */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    /* Isso permite que a lista se adapte ao espaço disponível */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-branco);
+    font-weight: normal;
+    /*alterei o negrito do menu como pedido no documento */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--cor-limao);
+}
+
+.btn-orcamento {
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-orcamento:hover {
+    background-color: var(--cor-amarelo);
+    color: var(--cor-preto);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        /* Navegação se organiza em coluna em telas menores */
+        align-items: flex-start;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+        /* Adiciona espaço abaixo da logo em telas menores */
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Links de navegação em coluna */
+        width: 100%;
+        /* Ocupa a largura total disponível */
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Adiciona espaço entre os itens de navegação */
+    }
+
+    .btn-orcamento {
+        width: 100%;
+        /* Botão de orçamento ocupa toda a largura disponível */
+        text-align: center;
+        margin-top: 10px;
+        /* Espaço acima do botão em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-orcamento {
+        padding: 8px 16px;
+        /* Ajusta o padding para telas muito pequenas */
+        font-size: 14px;
+        /* Reduz o tamanho da fonte para o botão */
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        /* Reduz o tamanho da fonte dos links de navegação */
+    }
+
+    .logo-container {
+        max-width: 120px;
+        /* Ajusta o tamanho máximo da logo para telas muito pequenas */
+    }
+}
+
+/* Estilização do conteúdo principal */
+#home {
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+    padding: 50px 20px;
+    background-color: var(--cor-verde-escuro);
+    color: var(--cor-branco);
+    position: relative;
+    /* Permite o posicionamento absoluto dentro */
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    /* Evita barra de rolagem */
+}
+
+#texthome {
+    z-index: 2;
+    /* Ajusta o índice de camada para garantir que fique acima do banner */
+    position: relative;
+    /* Garante que o texto se posicione de forma apropriada */
+    color: var(--cor-branco);
+    /* Garante que o texto tenha a cor branca sobre o banner */
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+    max-width: 500px;
+    /* Limita a largura do texto */
+    padding: 0 20px;
+    /* Adiciona espaçamento horizontal ao redor do texto */
+    margin-top: 0;
+    /* Remove qualquer margem superior desnecessária */
+    transform: none;
+    /* Remove o efeito de "subir" o texto */
+}
+
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-nostra {
+    color: var(--cor-limao);
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#texthome_btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-default {
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-default:hover {
+    background-color: var(--cor-amarelo);
+    color: var(--cor-preto);
+}
+
+.social_media_btn {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.social_media_btn a {
+    color: var(--cor-branco);
+    transition: color 0.3s;
+}
+
+.social_media_btn a:hover {
+    color: var(--cor-limao);
+}
+
+#banner {
+    width: 100vw;
+    /* A largura será 100% da viewport (tela) */
+    height: 400px;
+    /* Defina a altura desejada para o banner */
+    background-image: url('seu-banner.jpg');
+    /* Substitua pela sua imagem */
+    background-size: cover;
+    /* Faz a imagem cobrir toda a área do banner */
+    background-position: center;
+    /* Alinha a imagem ao centro */
+    position: relative;
+    /* Permite que outros elementos sejam posicionados sobre ele */
+    margin-top: -270px;
+    /* Mantido para ajustar a posição */
+    padding: 0;
+    /* Remove qualquer preenchimento interno */
+}
+
+#banner img {
+    width: 105% !important;
+    height: auto;
+    object-fit: cover;
+    /* Faz com que a imagem preencha o espaço do banner sem distorções */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    #banner {
+        width: 100%;
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #banner {
+        width: 100%;
+        margin-top: -30px;
+        /* Ajuste para telas menores */
+        justify-content: center;
+    }
+}
+
+/* Ocultar o banner em dispositivos móveis */
+@media (max-width: 768px) {
+    #banner {
+        display: none; /* Remove o banner em telas menores */
+    }
+}
+
+
+#texthome {
+    z-index: 2;
+    position: absolute;
+    top: 28%;
+    /* Ajuste para mover o texto mais para cima */
+    left: 20px;
+    transform: translateY(-50%);
+    color: var(--cor-branco);
+    text-align: left;
+    max-width: 500px;
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    #texthome_btn {
+        flex-direction: column;
+        /* Coloca os botões um abaixo do outro */
+        gap: 10px;
+        /* Reduz o espaço entre os botões */
+    }
+
+    #banner {
+        max-width: 90%;
+    }
+}
+
+/*Sobre nós */
+
+#about-us {
+    padding: 60px 20px;
+    background-color: #EFEFF1 !important;
+    color: #27401e !important;
+    text-align: center;
+    margin-top: -247px;
+}
+
+.icon {
+    width: 70px;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;
+    position: absolute;
+    top: 2%;
+    /* Posiciona o ícone a 50% da altura da caixa */
+    right: -35px;
+    /* Coloca o ícone para a direita, metade para fora da caixa */
+    transform: translateY(-50%);
+    /* Centraliza verticalmente */
+    /* O ícone ficará metade dentro e metade fora da caixa */
+}
+
+.about-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Mitr', sans-serif;
+}
+
+.quem-somos {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Mitr', sans-serif;
+    color: #27401e;
+    font-weight: bold;
+}
+
+#about-us p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--cor-branco);
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+}
+
+.paragrafo {
+    font-size: 1.2rem;
+    margin: 20px auto;
+    /* Ajustar margem para centralizar */
+    padding: 15px 20px;
+    /* Espaçamento interno */
+    max-width: 800px;
+    /* Largura máxima para o texto */
+    background-color: var(--cor-verde);
+    /* Fundo branco com transparência */
+    color: var(--cor-preto);
+    /* Texto em preto para contraste */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar */
+    line-height: 1.6;
+    /* Altura da linha para melhorar a legibilidade */
+    text-align: center;
+    /* Centralizar o texto */
+    font-family: 'Nunito', sans-serif;
+    /* Aplicando a fonte Nunito */
+}
+
+.mission-vision-values {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Permite que as caixas se movam para uma nova linha se não houver espaço */
+}
+
+.mission,
+.vision,
+.values {
+    flex: 1 1 auto;
+    /* Permite que as caixas cresçam e encolham */
+    max-width: 600px;
+    /* Largura máxima */
+    min-width: 250px;
+    /* Largura mínima */
+    margin: 10px;
+    /* Mantém as margens */
+    padding: 10px;
+    /* Diminui o padding para reduzir a altura */
+    background-color: #E75E0E;
+    /* Cor laranja */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    color: var(--cor-branco);
+    /* Cor do texto */
+    height: 150px;
+    /* Defina uma altura específica, se necessário */
+    overflow: hidden;
+    /* Impede que o texto saia da caixa */
+    box-sizing: border-box;
+    /* Inclui padding e bordas na largura e altura total */
+    text-align: center;
+    /* Centraliza o texto dentro das caixas */
+}
+
+.mission h3,
+.vision h3,
+.values h3 {
+    font-size: 1.2rem;
+    /* Tamanho de fonte dos títulos ajustado */
+    margin-bottom: 10px;
+    /* Melhor espaçamento */
+    font-family: 'Mitr', sans-serif;
+    /* Usando fonte Mitr para títulos de seções */
+    margin-top: 0px;
+    /* Ajuste o valor conforme necessário */
+
+}
+
+.mission-vision-values h3 i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    color: #27401e; /* Cor para harmonizar com o design */
+    font-size: 1.2rem; /* Ajusta o tamanho dos ícones */
+    vertical-align: middle; /* Alinha o ícone ao texto */
+}
+
+
+.mission p,
+.vision p,
+.values p,
+/* Certifique-se de que todos os parágrafos sejam afetados */
+.values ul {
+    font-size: 0.8rem;
+    /* Ajustado o tamanho da fonte para textos longos */
+    line-height: 1.2;
+    /* Ajusta o espaçamento entre linhas para melhor ajuste */
+    font-family: 'Nunito', sans-serif;
+    /* Usando fonte Nunito para textos longos */
+    overflow: hidden;
+    /* Esconde o texto que excede a altura */
+    text-overflow: ellipsis;
+    /* Adiciona reticências para indicar texto cortado */
+    white-space: nowrap;
+    /* Impede que o texto quebre em múltiplas linhas */
+
+}
+
+.values p {
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+}
+
+
+.mission-vision-values .mission p,
+.mission-vision-values .vision p {
+    font-size: 0.8rem !important;
+    /* Ajustado o tamanho da fonte */
+}
+
+.values ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.values li {
+    margin-bottom: 5px;
+    /* Menor espaçamento entre itens da lista */
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 768px) {
+    .mission-vision-values {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        /* Mantém as caixas lado a lado */
+    }
+
+    .mission,
+    .vision,
+    .values {
+        flex: 1 1 300px;
+        /* Permite que as caixas tenham largura mínima de 300px */
+        max-width: 600px;
+        /* Largura máxima */
+        margin: 10px;
+        /* Mantém as margens */
+        padding: 10px;
+        /* Mantém o padding reduzido */
+        height: 150px;
+        /* Define uma altura específica para as caixas */
+        background-color: #E75E0E;
+        /* Cor laranja */
+        border-radius: 10px;
+        /* Bordas arredondadas */
+        color: var(--cor-branco);
+        /* Cor do texto */
+        box-sizing: border-box;
+        /* Inclui padding e bordas na largura e altura total */
+    }
+}
+
+
+/* Estilos para telas menores (tablets e smartphones) */
+@media (max-width: 767px) {
+    #about-us {
+        padding: 40px 10px;
+    }
+
+    #about-us h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    #about-us p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .mission-vision-values {
+        display: block;
+    }
+
+    .mission,
+    .vision,
+    .values {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .mission h3,
+    .vision h3,
+    .values h3 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .mission p,
+    .vision p,
+    .values ul {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Background logos */
+.logos-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    /* Limitar a altura máxima */
+    z-index: 1;
+    /* Colocar acima do fundo */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    /* Ajustar padding conforme necessário */
+    overflow: hidden;
+    /* Esconder o excesso que ultrapassar o espaço */
+    opacity: 0.8;
+    /* Ajustar a opacidade */
+}
+
+/* Reduzindo a logo da header pedida na documentacao */
+.NostraLogo {
+    max-width: 150px;
+}
+
+/* Reduzindo a logo da header pedida na documentacao */
+.logo {
+    width: 150px;
+}
+
+.NostraLogo img {
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura do container */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+
+.logos {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    /* Colocar 3 logos por linha */
+    gap: 10px;
+    /* Ajustar gap entre logos */
+}
+
+
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) { /* Ajuste o valor de 768px conforme necessário para sua definição de mobile */
+    .logo img {
+        display: none;
+    }
+}
+
+
+/* Adjustments for the "Quem Somos" section */
+#about-us {
+    position: relative;
+    /* Habilitar posicionamento */
+    z-index: 0;
+    /* Fundo laranja ficará atrás */
+    padding: 60px 20px;
+    background-color: var(--cor-laranja);
+    color: var(--cor-preto);
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    /* Garantir que o conteúdo fique acima das imagens */
+}
+
+/*Nossos serviços */
+
+/* Seção Nossos Serviços */
+/* Ajustar logos como background para o lado direito */
+.logos-background-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    /* Limitar a altura máxima */
+    z-index: 1;
+    /* Colocar acima do fundo */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+    /* Ajustar padding conforme necessário */
+    overflow: hidden;
+    /* Esconder o excesso que ultrapassar o espaço */
+    opacity: 0.8;
+    /* Ajustar a opacidade conforme necessário */
+}
+
+/* Ajustar layout das logos no lado direito */
+.logos-right {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    /* Organiza as logos em 3 colunas */
+    gap: 10px;
+    /* Ajustar gap entre logos */
+}
+
+.logo-right {
+    background-color: transparent;
+    padding: 0;
+    width: 120px;
+}
+
+.logo-right img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* Ajustes para manter a área amarela como fundo */
+#services {
+    position: relative;
+    z-index: 1;
+    /* Mantém o fundo atrás das logos */
+    padding: 60px 20px;
+    background-color: #491339;
+    color: var(--cor-preto);
+    text-align: center;
+}
+
+.Service-p {
+    position: relative;
+    display: inline-block;
+}
+
+.Service-p .icon {
+    width: 70px;
+    /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;
+    position: absolute;
+    top: 10%;
+    /* Alinha verticalmente o ícone no meio do parágrafo */
+    right: -35px;
+    /* Move a imagem para a direita, metade para fora da caixa */
+    transform: translateY(-50%);
+    /* Centraliza verticalmente o ícone */
+}
+
+/* Muda só a palavra Nossos Servicos*/
+.bold-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Mitr', sans-serif;
+    color: var(--cor-branco);
+    font-weight: bold;
+    /* ou 600 */
+    
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    /* Conteúdo acima das imagens */
+}
+
+/* Estilos para o restante da seção Nossos Serviços */
+.services-container h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: 'Mitr', sans-serif;
+    /* Fonte para o título */
+    color: #c2c517;
+    /* Altere a cor aqui */
+    font-size: 2.5rem;
+}
+
+.service-options {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: var(--cor-branco);
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    opacity: 1;
+    /* Garanta que os itens estejam visíveis */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.service-item.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-item:hover .service-image {
+    transform: scale(1.1);
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    transition: transform 0.3s ease;
+}
+
+.service-item h3 {
+    margin-top: 0;
+    font-family: 'Mitr', sans-serif;
+    /* Fonte para títulos dos serviços */
+}
+
+.service-item p {
+    margin-bottom: 0;
+    font-family: 'Nunito', sans-serif;
+    /* Fonte para textos descritivos dos serviços */
+}
+
+.Service-p {
+    font-size: 1.2rem;
+    margin: 20px auto;
+    /* Ajustar margem para centralizar */
+    padding: 15px 20px;
+    /* Espaçamento interno */
+    max-width: 800px;
+    /* Largura máxima para o texto */
+    background-color: #c2c517;
+    /* Fundo branco com transparência */
+    color: #efeff1;
+    /* Texto em preto para contraste */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar */
+    line-height: 1.6;
+    /* Altura da linha para melhorar a legibilidade */
+    text-align: center;
+    /* Centralizar o texto */
+    font-family: 'Nunito', sans-serif;
+    /* Aplicando a fonte Nunito */
+}
+
+.service-paragrafo {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--cor-preto);
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 768px) {
+    .service-options {
+        display: flex;
+        gap: 2em;
+        flex-wrap: wrap;
+    }
+
+    .service-item {
+        flex: 1;
+        min-width: 250px;
+        padding: 1.5em;
+        text-align: center;
+    }
+}
+
+/* Estilos para telas menores (tablets e smartphones) */
+@media (max-width: 767px) {
+    #services {
+        padding: 1em 0;
+    }
+
+    .services-container {
+        padding: 0 1em;
+    }
+
+    .services-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    }
+
+    .service-options {
+        display: block;
+        gap: 1em;
+    }
+
+    .service-item {
+        margin-bottom: 1em;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .service-image {
+        margin-bottom: 0.5em;
+    }
+
+    .service-item h3 {
+        font-size: 1.2rem;
+        font-family: 'Mitr', sans-serif;
+        /* Fonte para títulos dos serviços em telas menores */
+    }
+
+    .service-item p {
+        font-size: 0.9rem;
+        font-family: 'Nunito', sans-serif;
+        /* Fonte para textos descritivos dos serviços em telas menores */
+    }
+}
+
+
+
+
+
+
+/*Fotos Comida */
+
+/* Expanding Cards */
+
+#photo-gallery {
+    background-color: var(--cor-branco);
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.expanding-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.expanding-card {
+    flex: 1;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    transition: flex 0.5s ease-in-out, transform 0.5s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+}
+
+.expanding-card:hover {
+    flex: 3; /* Expande ao passar o mouse */
+    transform: scale(1.05); /* Dá um leve zoom */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.expanding-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.expanding-card:hover:before {
+    opacity: 1;
+}
+
+
+
+
+/*Contato*/
+
+/* Contato */
+#contato {
+    padding: 50px 8%;
+    background-color: #27401e; /* Cor de fundo */
+    color: #ffffff;
+}
+
+#contato .section-title {
+    font-size: 2.5rem;
+    color: #97c74f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Estilo das Informações de Contato */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    font-size: 1.5rem;
+    color: #97c74f;
+}
+
+/* Estilo do Formulário */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #97c74f;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333333;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999999;
+}
+
+.contact-form button {
+    background-color: #97c74f;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #85b540;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+}
+
+
+
+/* Estilização do footer */
+#footer {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container>div {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-about h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-limao);
+}
+
+.footer-about p,
+.footer-contact p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.footer-social .social-icons a {
+    color: var(--cor-branco);
+    transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    color: var(--cor-limao);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cor-branco);
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+
+.partners {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.partners-logos img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.partners-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container>div {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer-about h3,
+    .footer-contact h3,
+    .footer-social h3 {
+        font-size: 1.3rem;
+        /* Reduz o tamanho da fonte dos títulos */
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        font-size: 0.9rem;
+        /* Reduz o tamanho da fonte do texto */
+    }
+
+    .footer-social .social-icons {
+        font-size: 1.2rem;
+        /* Reduz o tamanho dos ícones sociais */
+        gap: 10px;
+        /* Ajusta o espaçamento entre ícones */
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+        /* Reduz o tamanho da fonte do texto inferior */
+    }
+}
+
+@keyframes fadeIn {
+
+    /* <section id="about-us" class="fade-in"> */
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.fade-in-delayed {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes shake {
+
+    /* <div class="shake">
+        <!-- Conteúdo -->
+    </div>*/
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* Estilos do Carrossel de Convênios */
+/* Container principal do carrossel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #F5F5F5;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.carousel-slide {
+    display: none;
+}
+
+.carousel img {
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: var(--cor-limao);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #243C1C;
+    /* Cor mais clara para indicar a bolinha ativa */
+}
+
+#instagram-posts {
+    display: flex;
+    justify-content: center;
+    /* Alinha os itens ao centro */
+    gap: 20px;
+    /* Espaço entre as postagens */
+    flex-wrap: wrap;
+    /* Permite que as postagens se ajustem à linha */
+    padding: 10px;
+    /* Espaço interno ao redor do feed */
+}
+
+.instagram-media {
+    flex: 1 1 200px;
+    /* A largura mínima será 200px, mas os itens podem crescer */
+    max-width: 250px;
+    /* Define uma largura máxima para as postagens */
+    height: 300px;
+    /* Define uma altura fixa */
+    margin-bottom: 15px;
+    /* Espaço entre as postagens na parte inferior */
+    overflow: hidden;
+    /* Garante que o excesso da imagem seja cortado */
+    border-radius: 8px;
+    /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Adiciona um leve efeito de sombra */
+}
+
+.instagram-media img {
+    width: 100%;
+    /* A imagem ocupará 100% da largura do contêiner */
+    height: 100%;
+    /* A imagem ocupará 100% da altura do contêiner */
+    object-fit: cover;
+    /* A imagem será cortada para cobrir o contêiner */
+    object-position: center;
+    /* Centraliza a posição da imagem */
+}
+
+.instagram-feed {
+    background-color: #8d1e13;
+    /* Cor de fundo da seção */
+    padding: 30px;
+    /* Adiciona algum espaço ao redor do conteúdo */
+}
+
+.instagram-feed .section-title {
+    color: #25a337;
+    /* Cor desejada para o título */
+    text-align: center;
+    /* Centraliza o título */
+    font-size: 2rem;
+    /* Tamanho do texto */
+    margin-bottom: 10px;
+}
+
+.instagram-feed .section-subtitle {
+    color: #25a337;
+    /* Cor desejada para o subtítulo */
+    text-align: center;
+    /* Centraliza o subtítulo */
+    font-size: 1.2rem;
+    /* Tamanho do texto */
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #instagram-posts {
+        gap: 15px;
+        /* Reduz o espaço entre os itens */
+        padding: 15px;
+        /* Reduz o padding em telas menores */
+    }
+
+    .instagram-media {
+        flex: 1 1 calc(50% - 10px);
+        /* Cada item ocupa 50% da largura com um pequeno espaço */
+        max-width: 100%;
+        /* Remove o limite máximo de largura */
+        height: 200px;
+        /* Reduz a altura em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-media {
+        flex: 1 1 100%;
+        /* Cada item ocupa 100% da largura */
+        height: 150px;
+        /* Altura reduzida para dispositivos muito pequenos */
+    }
+
+    .instagram-feed .section-title {
+        font-size: 1.5rem;
+        /* Reduz o tamanho do título */
+    }
+
+    .instagram-feed .section-subtitle {
+        font-size: 1rem;
+        /* Reduz o tamanho do subtítulo */
+    }
+}
